@@ -10,4 +10,4 @@
 - Atualização de um ponto turistico por usuários autorizados - Via Token (Permissão Especial)
 - Deletar um ponto turistico por usuários autorizados - Via Token (Permissão Especial)
 
-![](django-api/uml.png)
+![Imagem](/uml.png)
