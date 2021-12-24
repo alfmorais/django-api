@@ -10,4 +10,4 @@
 - Atualização de um ponto turistico por usuários autorizados - Via Token (Permissão Especial)
 - Deletar um ponto turistico por usuários autorizados - Via Token (Permissão Especial)
 
-![Imagem](/uml.png)
+![Imagem](/diagram-uml.png)
