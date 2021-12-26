@@ -10,6 +10,6 @@ class EnderecoAdmin(admin.ModelAdmin):
         "cidade",
         "estado",
         "pais",
-        "latitulde",
-        "latitulde",
+        "latitude",
+        "longitude",
     )

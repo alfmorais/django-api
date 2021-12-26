@@ -7,8 +7,8 @@ class Endereco(models.Model):
     cidade = models.CharField(max_length=256)
     estado = models.CharField(max_length=256)
     pais = models.CharField(max_length=128)
-    latitulde = models.IntegerField(null=True, blank=True)
-    latitulde = models.IntegerField(null=True, blank=True)
+    latitude = models.IntegerField(null=True, blank=True)
+    longitude = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.linha1}"
