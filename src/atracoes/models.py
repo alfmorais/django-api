@@ -9,3 +9,7 @@ class Atracao(models.Model):
 
     def __str__(self):
         return f"{self.nome}"
+
+    class Meta:
+        verbose_name = "Atração"
+        verbose_name_plural = "Atrações"
