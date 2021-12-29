@@ -7,6 +7,7 @@ class EnderecoSerializer(ModelSerializer):
     class Meta:
         model = Endereco
         fields = (
+            "id",
             "linha1",
             "linha2",
             "cidade",
