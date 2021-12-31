@@ -32,5 +32,15 @@ class PontoTuristicoViewSet(ModelViewSet):
     # sobrescrevendo o método UPDATE
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)
-    """
+
+    def update(self, request, *args, **kwargs):
+        return super().update(request, *args, **kwargs)
     
+    def partial_update(self, request, *args, **kwargs):
+        return super().partial_update(request, *args, **kwargs)
+    
+    @action(method=["GET"], detail=True)
+    def nome_da_função(self, request, pk=None):
+        return super().update(request, *args, **kwargs)
+    
+    """
