@@ -24,4 +24,13 @@ class PontoTuristicoViewSet(ModelViewSet):
     # sobrescrevendo o método POST
     def create(self, request, *args, **kwargs):
         return super().create(request, *args, **kwargs)
+    
+    # sobrescrevendo o método DELETE
+    def destroy(self, request, *args, **kwargs):
+        return super().create(request, *args, **kwargs)
+    
+    # sobrescrevendo o método UPDATE
+    def retrieve(self, request, *args, **kwargs):
+        return super().retrieve(request, *args, **kwargs)
     """
+    
