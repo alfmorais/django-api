@@ -12,6 +12,7 @@ class PontoTuristicoViewSet(ModelViewSet):
         return queryset
     
     """
+    # sobrescrevendo o método GET
     def list(self, request, *args, **kwargs):
         dictionary = {
             "nome": "Alfredo de Morais Neto",
@@ -19,4 +20,8 @@ class PontoTuristicoViewSet(ModelViewSet):
             "estado civil": "casado",
         }
         return Response(dictionary)
+    
+    # sobrescrevendo o método POST
+    def create(self, request, *args, **kwargs):
+        return super().create(request, *args, **kwargs)
     """
