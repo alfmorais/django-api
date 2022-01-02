@@ -1,5 +1,5 @@
-from rest_framework.serializers import ModelSerializer
 from atracoes.models import Atracao
+from rest_framework.serializers import ModelSerializer
 
 
 class AtracaoSerializer(ModelSerializer):
@@ -11,5 +11,5 @@ class AtracaoSerializer(ModelSerializer):
             "descricao",
             "horario_funcionamento",
             "idade_minima",
+            "foto",
         )
-

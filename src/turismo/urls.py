@@ -13,26 +13,27 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from atracoes.api.viewsets import AtracoesViewSet
+from avaliacoes.api.viewsets import AvaliacoesViewSet
+from comentarios.api.viewsets import ComentariosViewSet
+from core.api.viewsets import PontoTuristicoViewSet
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
-from rest_framework import routers
-from core.api.viewsets import PontoTuristicoViewSet
-from atracoes.api.viewsets import AtracoesViewSet
-from comentarios.api.viewsets import ComentariosViewSet
-from avaliacoes.api.viewsets import AvaliacoesViewSet
 from enderecos.api.viewsets import EnderecosViewSet
-
+from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register(r'pontoturistico', PontoTuristicoViewSet, basename='PontoTuristico')
-router.register(r'atracoes', AtracoesViewSet)
-router.register(r'comentarios', ComentariosViewSet)
-router.register(r'avaliacoes', AvaliacoesViewSet)
-router.register(r'enderecos', EnderecosViewSet)
+router.register(r"pontoturistico", PontoTuristicoViewSet, basename="PontoTuristico")
+router.register(r"atracoes", AtracoesViewSet)
+router.register(r"comentarios", ComentariosViewSet)
+router.register(r"avaliacoes", AvaliacoesViewSet)
+router.register(r"enderecos", EnderecosViewSet)
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include(router.urls))
-]
+    path("admin/", admin.site.urls),
+    path("", include(router.urls)),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
