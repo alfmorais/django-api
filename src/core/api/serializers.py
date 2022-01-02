@@ -1,5 +1,5 @@
-from rest_framework.serializers import ModelSerializer
 from core.models import PontoTuristico
+from rest_framework.serializers import ModelSerializer
 
 
 class PontoTuristicoSerializer(ModelSerializer):
@@ -9,4 +9,5 @@ class PontoTuristicoSerializer(ModelSerializer):
             "id",
             "nome",
             "descricao",
+            "foto",
         )
