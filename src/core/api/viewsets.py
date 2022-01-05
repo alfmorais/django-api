@@ -1,6 +1,6 @@
 from core.models import PontoTuristico
 from rest_framework.filters import SearchFilter
-
+from rest_framework.permissions import IsAuthenticated
 # from rest_framework.decorators import action
 from rest_framework.viewsets import ModelViewSet
 
@@ -17,6 +17,7 @@ class PontoTuristicoViewSet(ModelViewSet):
         "foto",
     )
     lookup_field = "nome"
+    permission_classes = (IsAuthenticated,)
 
     def get_queryset(self):
         queryset = PontoTuristico.objects.filter(aprovado=True)
@@ -46,7 +47,7 @@ class PontoTuristicoViewSet(ModelViewSet):
         return super(PontoTuristicoSerializer, self).partial_update(
             request, *args, **kwargs
         )
-    
+
     @action(method=["GET"], detail=True)
     def nome_da_função(self, request, *args, **kwargs):
         pass
